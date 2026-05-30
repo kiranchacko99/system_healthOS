@@ -1,0 +1,77 @@
+body{
+    margin:0;
+    background:#09090f;
+    color:white;
+    font-family:-apple-system, sans-serif;
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:#13131c;
+    border:1px solid #2f2f45;
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.hero{
+    text-align:center;
+}
+
+h1{
+    color:#b58cff;
+    margin:0;
+}
+
+.class-name{
+    opacity:.7;
+}
+
+.level{
+    margin-top:15px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.xp-bar,
+.momentum-bar{
+    background:#222233;
+    height:14px;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:15px;
+}
+
+#xp-fill{
+    width:0%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #6d28d9,
+        #b58cff
+    );
+}
+
+#momentum-fill{
+    width:50%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        #3b82f6,
+        #06b6d4
+    );
+}
+
+.quest{
+    margin-bottom:15px;
+}
+
+input[type=checkbox]{
+    transform:scale(1.4);
+    margin-right:10px;
+}

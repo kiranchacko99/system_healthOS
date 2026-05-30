@@ -1,0 +1,8 @@
+{
+  "name":"The System",
+  "short_name":"System",
+  "display":"standalone",
+  "background_color":"#09090f",
+  "theme_color":"#09090f",
+  "start_url":"./"
+}

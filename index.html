@@ -1,92 +1,397 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The System</title>
 
-<link rel="stylesheet" href="style.css">
+```
+<meta name="theme-color" content="#09090f">
+
 <link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
 
-<meta name="theme-color" content="#121212">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+```
 
 </head>
+
 <body>
 
-<div class="container">
+<div class="app">
 
-    <div class="card hero">
+```
+<!-- SYSTEM HEADER -->
 
-        <h1>KIRAN</h1>
+<section class="card hero">
 
-        <p class="class-name">Strength Athlete</p>
+    <div class="system-label">
+        THE SYSTEM
+    </div>
 
-        <p id="title">The Awakening</p>
+    <h1>KIRAN</h1>
 
-        <div class="level">
-            LEVEL <span id="level">1</span>
+    <div class="class-name">
+        Strength Athlete
+    </div>
+
+    <div id="playerTitle" class="player-title">
+        The Awakening
+    </div>
+
+    <div class="level-row">
+
+        <div>
+            LEVEL
         </div>
 
-        <div class="xp-bar">
-            <div id="xp-fill"></div>
+        <div id="level">
+            1
         </div>
-
-        <p id="xp-text">0 / 1000 XP</p>
 
     </div>
 
-    <div class="card">
+    <div class="xp-bar">
 
-        <h2>Momentum</h2>
-
-        <div class="momentum-bar">
-            <div id="momentum-fill"></div>
+        <div
+            id="xpFill"
+            class="xp-fill">
         </div>
-
-        <p id="momentum-text">50 / 100</p>
 
     </div>
 
-    <div class="card">
+    <div
+        id="xpText"
+        class="xp-text">
 
-        <h2>Daily Quests</h2>
+        0 / 1000 XP
 
-        <div class="quest">
-            <label>
-                <input type="checkbox" data-xp="20">
-                Protein Goal (200g)
-            </label>
+    </div>
+
+</section>
+
+<!-- SYSTEM MESSAGE -->
+
+<section class="card">
+
+    <div class="section-title">
+
+        SYSTEM MESSAGE
+
+    </div>
+
+    <div id="systemMessage">
+
+        Welcome back.
+
+    </div>
+
+</section>
+
+<!-- MOMENTUM -->
+
+<section class="card">
+
+    <div class="section-title">
+
+        MOMENTUM
+
+    </div>
+
+    <div class="momentum-bar">
+
+        <div
+            id="momentumFill"
+            class="momentum-fill">
         </div>
 
-        <div class="quest">
-            <label>
-                <input type="checkbox" data-xp="25">
-                Calorie Goal (2159)
-            </label>
-        </div>
+    </div>
 
-        <div class="quest">
-            <label>
-                <input type="checkbox" data-xp="50">
-                Workout Complete
-            </label>
-        </div>
+    <div
+        id="momentumText"
+        class="stat-text">
 
-        <div class="quest">
-            <label>
-                <input type="checkbox" data-xp="10">
-                10,000 Steps
-            </label>
-        </div>
+        50 / 100
 
-        <div class="quest">
-            <label>
-                <input type="checkbox" data-xp="30">
+    </div>
+
+    <div
+        id="multiplierText"
+        class="bonus-text">
+
+        XP Multiplier: 1.0x
+
+    </div>
+
+</section>
+
+<!-- STREAK -->
+
+<section class="card">
+
+    <div class="section-title">
+
+        CURRENT STREAK
+
+    </div>
+
+    <div
+        id="streakDisplay"
+        class="big-stat">
+
+        0 Days
+
+    </div>
+
+</section>
+
+<!-- DAILY QUESTS -->
+
+<section class="card">
+
+    <div class="section-title">
+
+        DAILY QUESTS
+
+    </div>
+
+    <div id="dailyQuests">
+
+        <label class="quest">
+            <input
+                type="checkbox"
+                id="proteinQuest">
+
+            <span>
+                Hit Protein Goal (200g)
+            </span>
+
+            <span class="reward">
+                +20 XP
+            </span>
+        </label>
+
+        <label class="quest">
+            <input
+                type="checkbox"
+                id="calorieQuest">
+
+            <span>
+                Stay Under 2159 Calories
+            </span>
+
+            <span class="reward">
+                +25 XP
+            </span>
+        </label>
+
+        <label class="quest">
+            <input
+                type="checkbox"
+                id="workoutQuest">
+
+            <span>
+                Complete Workout
+            </span>
+
+            <span class="reward">
+                +50 XP
+            </span>
+        </label>
+
+        <label class="quest">
+            <input
+                type="checkbox"
+                id="stepsQuest">
+
+            <span>
+                Walk 10,000 Steps
+            </span>
+
+            <span class="reward">
+                +10 XP
+            </span>
+        </label>
+
+        <label class="quest">
+            <input
+                type="checkbox"
+                id="sleepQuest">
+
+            <span>
                 Sleep 7.5 Hours
-            </label>
-        </div>
+            </span>
+
+            <span class="reward">
+                +30 XP
+            </span>
+        </label>
 
     </div>
+
+</section>
+
+<!-- SIDE QUEST -->
+
+<section class="card">
+
+    <div class="section-title">
+
+        DAILY SIDE QUEST
+
+    </div>
+
+    <div
+        id="sideQuestText">
+
+        Loading...
+
+    </div>
+
+    <button
+        id="sideQuestButton">
+
+        Complete Side Quest
+
+    </button>
+
+</section>
+
+<!-- ATTRIBUTES -->
+
+<section class="card">
+
+    <div class="section-title">
+
+        ATTRIBUTES
+
+    </div>
+
+    <div class="attribute">
+        <span>Strength</span>
+        <span id="strengthStat">10</span>
+    </div>
+
+    <div class="attribute">
+        <span>Muscle</span>
+        <span id="muscleStat">10</span>
+    </div>
+
+    <div class="attribute">
+        <span>Conditioning</span>
+        <span id="conditioningStat">10</span>
+    </div>
+
+    <div class="attribute">
+        <span>Discipline</span>
+        <span id="disciplineStat">10</span>
+    </div>
+
+    <div class="attribute">
+        <span>Recovery</span>
+        <span id="recoveryStat">10</span>
+    </div>
+
+</section>
+
+<!-- MAIN QUEST -->
+
+<section class="card">
+
+    <div class="section-title">
+
+        PROJECT ASCENSION
+
+    </div>
+
+    <div>
+
+        Current Weight:
+        <strong id="currentWeight">
+
+            215 lbs
+
+        </strong>
+
+    </div>
+
+    <div>
+
+        Target Weight:
+        <strong>
+
+            180 lbs
+
+        </strong>
+
+    </div>
+
+    <div
+        id="weightLost">
+
+        Lost: 0 lbs
+
+    </div>
+
+</section>
+
+<!-- WEIGHT LOG -->
+
+<section class="card">
+
+    <div class="section-title">
+
+        WEIGHT LOG
+
+    </div>
+
+    <input
+        id="weightInput"
+        type="number"
+        step="0.1"
+        placeholder="Enter weight">
+
+    <button
+        id="saveWeightButton">
+
+        Save Weight
+
+    </button>
+
+    <div
+        id="lastWeightEntry">
+
+        No entries yet
+
+    </div>
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+
+<section class="card">
+
+    <div class="section-title">
+
+        ACHIEVEMENTS
+
+    </div>
+
+    <div id="achievementList">
+
+        <div>🏆 First Workout</div>
+        <div>🏆 Level 5</div>
+        <div>🏆 30 Day Streak</div>
+        <div>🏆 Lose 10 lbs</div>
+
+    </div>
+
+</section>
+```
 
 </div>
 

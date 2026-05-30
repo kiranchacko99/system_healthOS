@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The System</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#121212">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card hero">
+
+        <h1>KIRAN</h1>
+
+        <p class="class-name">Strength Athlete</p>
+
+        <p id="title">The Awakening</p>
+
+        <div class="level">
+            LEVEL <span id="level">1</span>
+        </div>
+
+        <div class="xp-bar">
+            <div id="xp-fill"></div>
+        </div>
+
+        <p id="xp-text">0 / 1000 XP</p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Momentum</h2>
+
+        <div class="momentum-bar">
+            <div id="momentum-fill"></div>
+        </div>
+
+        <p id="momentum-text">50 / 100</p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Daily Quests</h2>
+
+        <div class="quest">
+            <label>
+                <input type="checkbox" data-xp="20">
+                Protein Goal (200g)
+            </label>
+        </div>
+
+        <div class="quest">
+            <label>
+                <input type="checkbox" data-xp="25">
+                Calorie Goal (2159)
+            </label>
+        </div>
+
+        <div class="quest">
+            <label>
+                <input type="checkbox" data-xp="50">
+                Workout Complete
+            </label>
+        </div>
+
+        <div class="quest">
+            <label>
+                <input type="checkbox" data-xp="10">
+                10,000 Steps
+            </label>
+        </div>
+
+        <div class="quest">
+            <label>
+                <input type="checkbox" data-xp="30">
+                Sleep 7.5 Hours
+            </label>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
